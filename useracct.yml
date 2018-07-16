@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: create user account
+      user: name={{item}} password=$6$vPKeNyk7JcLDMGkU$E3zrNtLQ4UWvxULaDcXoTe0aeJ/rSM9z3MPk4Xz15r7M/hJEP3nSsZeWkq8iiVs7XcXnYTA4NmauZsVPONrbL1 append=yes state=present update_password=always
+      with_items:
+        - ola
+        - akin
+        - yomi
+        - ade
